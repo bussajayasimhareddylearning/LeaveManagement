@@ -12,5 +12,6 @@ namespace leave_management.Data
             : base(options)
         {
         }
+        public DbSet<Employee> Employees { get; set; }
     }
 }
