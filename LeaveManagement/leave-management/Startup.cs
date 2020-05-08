@@ -1,19 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using leave_management.Contracts;
 using leave_management.Data;
+using leave_management.Mappings;
+using leave_management.Repositories;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using leave_management.Contracts;
-using leave_management.Repositories;
 
 namespace leave_management
 {
@@ -38,6 +34,7 @@ namespace leave_management
             services.AddScoped<IRepositoryLeaveType, RepositoryLeaveType>();
             services.AddScoped<IRepositoryLeaveHistory, RepositoryLeaveHistory>();
             services.AddScoped<IRepositoryLeaveAllocation, RepositoryLeaveAllocation>();
+            services.AddAutoMapper(typeof(Maps));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();

@@ -54,9 +54,6 @@ C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitC
 C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.csprojAssemblyReference.cache
-C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.csproj.CoreCompileInputs.cache
-C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.MvcApplicationPartsAssemblyInfo.cs
-C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.MvcApplicationPartsAssemblyInfo.cache
 C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.RazorAssemblyInfo.cache
 C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.RazorAssemblyInfo.cs
 C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.AssemblyInfoInputs.cache
@@ -82,3 +79,4 @@ C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitC
 C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.dll
 C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.pdb
 C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\obj\Debug\netcoreapp3.1\leave-management.genruntimeconfig.cache
+C:\Jayasimha Files\Learning\May-7 New Learnings\DotNetCoreByTrevoirWilliams_GitClone\LeaveManagement\leave-management\bin\Debug\netcoreapp3.1\AutoMapper.dll
