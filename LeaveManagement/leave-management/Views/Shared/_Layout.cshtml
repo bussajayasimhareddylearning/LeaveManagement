@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - core leave management</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/semantic-ui/semantic.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.semanticui.min.css" />
+
+
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
@@ -27,10 +31,10 @@
                                 Manage
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-white" href="#">Leave Types</a>
-                                <a class="dropdown-item text-white" href="#">Leave Allocations</a>
-                                <a class="dropdown-item text-white" href="#">Leave Applications</a>
-                                <a class="dropdown-item text-white" href="#">Employees</a>
+                                <a class="dropdown-item text-black" asp-controller="LeaveTypes" asp-action="Index">Leave Types</a>
+                                <a class="dropdown-item text-black" href="#">Leave Allocations</a>
+                                <a class="dropdown-item text-black" href="#">Leave Applications</a>
+                                <a class="dropdown-item text-black" href="#">Employees</a>
                             </div>
                         </li>
                     </ul>
@@ -46,12 +50,16 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; @System.DateTime.Now - leave_management - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; @System.DateTime.Now.Year - leave_management - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.semanticui.min.js" asp-append-version="true"></script>
+    <script src="~/lib/semantic-ui/semantic.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

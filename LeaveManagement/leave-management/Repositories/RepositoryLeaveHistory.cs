@@ -19,7 +19,10 @@ namespace leave_management.Repositories
             _db.LeaveHistories.Add(entity);
             return Save();
         }
-
+        public bool IsExists(int id)
+        {
+            return _db.LeaveHistories.Any(q => q.Id == id);
+        }
         public bool Delete(LeaveHistory entity)
         {
             _db.LeaveHistories.Remove(entity);
