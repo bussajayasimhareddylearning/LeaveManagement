@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace leave_management.Data
 {
-    public class LeaveHistory
+    public class LeaveRequest
     {
         [Key]
         public int Id { get; set; }
@@ -33,5 +33,8 @@ namespace leave_management.Data
         public DateTime DateActioned { get; set; }
 
         public bool? Approved { get; set; }
+
+        public string RequestComments { get; set; }
+        public bool Cancelled { get; set; }
     }
 }

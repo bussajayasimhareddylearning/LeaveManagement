@@ -244,6 +244,9 @@ namespace leave_management.Data.Migrations
                     b.Property<int>("NumberOfDays")
                         .HasColumnType("int");
 
+                    b.Property<int>("Period")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("EmployeeID");
@@ -253,7 +256,7 @@ namespace leave_management.Data.Migrations
                     b.ToTable("LeaveAllocations");
                 });
 
-            modelBuilder.Entity("leave_management.Data.LeaveHistory", b =>
+            modelBuilder.Entity("leave_management.Data.LeaveRequest", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -266,6 +269,9 @@ namespace leave_management.Data.Migrations
                     b.Property<string>("ApprovedByID")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<bool>("Cancelled")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("DateActioned")
                         .HasColumnType("datetime2");
 
@@ -277,6 +283,9 @@ namespace leave_management.Data.Migrations
 
                     b.Property<int>("LeaveTypeID")
                         .HasColumnType("int");
+
+                    b.Property<string>("RequestComments")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RequestingEmployeeID")
                         .HasColumnType("nvarchar(450)");
@@ -292,7 +301,7 @@ namespace leave_management.Data.Migrations
 
                     b.HasIndex("RequestingEmployeeID");
 
-                    b.ToTable("LeaveHistories");
+                    b.ToTable("LeaveRequests");
                 });
 
             modelBuilder.Entity("leave_management.Data.LeaveType", b =>
@@ -304,6 +313,9 @@ namespace leave_management.Data.Migrations
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("DefaultDays")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -400,7 +412,7 @@ namespace leave_management.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("leave_management.Data.LeaveHistory", b =>
+            modelBuilder.Entity("leave_management.Data.LeaveRequest", b =>
                 {
                     b.HasOne("leave_management.Data.Employee", "ApprovedBy")
                         .WithMany()

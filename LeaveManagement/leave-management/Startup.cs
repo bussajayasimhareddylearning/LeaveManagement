@@ -3,13 +3,13 @@ using leave_management.Contracts;
 using leave_management.Data;
 using leave_management.Mappings;
 using leave_management.Repositories;
+using leave_management.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace leave_management
 {
@@ -32,17 +32,17 @@ namespace leave_management
             //Adding Dependency Injection References between Contracts and Repositories
 
             services.AddScoped<IRepositoryLeaveType, RepositoryLeaveType>();
-            services.AddScoped<IRepositoryLeaveHistory, RepositoryLeaveHistory>();
+            services.AddScoped<IRepositoryLeaveRequest, RepositoryLeaveRequest>();
             services.AddScoped<IRepositoryLeaveAllocation, RepositoryLeaveAllocation>();
             services.AddAutoMapper(typeof(Maps));
 
-            services.AddDefaultIdentity<IdentityUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDefaultIdentity<Employee>().AddRoles<IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<Employee> userManager, RoleManager<IdentityRole> roleManager)
         {
 
 
